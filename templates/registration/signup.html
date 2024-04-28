@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kaydol{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+    {% endblock %}
+    
+</head>
+<body>
+    <div class="logo">EMPATİFİLM</div>
+    <main>
+        <div class="signup-container">
+            <h2 class="signup-heading">Kaydol</h2>
+            <div class="signup-form">
+                <p class="signup-text"> <a href="{% url 'login' %}">Zaten üye misiniz?</a></p>
+                <form method="post" class="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_username">Kullanıcı Adı:</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_email">E-posta:</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password1">Şifre:</label>
+                        {{ form.password1 }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password2">Şifre Tekrarı:</label>
+                        {{ form.password2 }}
+                    </div>
+                    <button type="submit" class="signup-button">Kaydol</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

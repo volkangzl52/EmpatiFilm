@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EMPATİFİLM{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <div class="logo">EMPATİFİLM</div>
+    <main class="home-content">
+        {% block content %}
+        {% if user.is_authenticated %}
+        <p><a class="change-password-link" href="{% url 'password_change' %}">Şifre değişikliği</a></p>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="logout-button" type="submit">ÇIKIŞ YAP</button>
+
+            
+            
+           
+            
+        <div class="btn">
+            <p class="home-message">Hoşgeldiniz <span class="username">{{ user.username }}</span></p>
+        <a  href="{% url 'survey' %}" class="anket">BANA FİLM ÖNER</a>
+        </div>
+
+        
+        </form>
+        
+        {% else %}
+        <p class="home-2">Giriş yapınız</p>
+        <p><a class="login-link" href="{% url 'login' %}">Giriş Yap</a></p>
+        <p><a class="signup-link" href="{% url 'signup' %}">Üye Ol</a></p>
+        
+        
+        
+        
+        {% endif %}
+
+        
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,798 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/oneri.css' %}">
+    <title>EMPATİFİLM</title>
+</head>
+<body>
+    <div class="logo">
+    <h1  id="logo">EMPATİFİLM</h1>
+    <h1 id="yazı"> <span class="username">{{ user.username }}</span> Senin İçin Önerilerimiz</h1>
+    
+    </div>
+
+    <a href="{% url 'survey' %}" class="geri"> ←GERİ DÖN</a>
+    <p><a class="change-password-link" href="{% url 'home' %}">ANASAYFA</a></p>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="logout-button" type="submit">ÇIKIŞ YAP</button>
+    
+    <ul>
+        
+            {% if movie_genre == "Comedy" %}
+        <div class="movie-container">
+            
+            <div class="movie" id="1">
+                <a  href="https://www.imdb.com/title/tt1119646/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_the%2520hango" target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/131394.jpg " alt=" ">
+                </a>
+                <h3>THE HANGOVER</h3>
+                <p>IMDB Puanı:7.7</p>
+                
+            </div>
+            <div class="movie" id="2">
+                <a  href="https://www.imdb.com/title/tt0315327/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_aman%2520tan"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/43219.jpg " alt=" ">
+                </a>
+                <h3>AMAN TANRIM!</h3>
+                <p>IMDB Puanı:6.8</p>
+                
+            </div>
+            <div class="movie" id="3">
+                <a  href="https://www.imdb.com/title/tt0430304/?ref_=nv_sr_srsg_1_tt_8_nm_0_q_k%25C3%25BC%25C3%25A7%25C3%25BCk%2520adam%2520"target="_blank">
+                    <img src="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/110189.jpg " alt=" ">
+                </a>
+                <h3>KÜÇÜK ADAM </h3>
+                <p>IMDB Puanı:4.5 </p>
+                
+            </div>
+            <div class="movie" id="4">
+                <a  href="https://www.imdb.com/title/tt0389860/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_click"target="_blank">
+                    <img src="https://tr.web.img2.acsta.net/c_310_420/pictures/bzp/01/47179.jpg " alt=" ">
+                </a>
+                <h3>CLİCK </h3>
+                <p>IMDB Puanı:6.4 </p>
+                
+            </div>
+            <div class="movie" id="5">
+                <a  href="https://www.imdb.com/title/tt1645170/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_diktat"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/188021.jpg " alt=" ">
+                </a>
+                <h3>DİKTATÖR</h3>
+                <p>IMDB Puanı:6.4 </p>
+                
+            </div>
+            <div class="movie" id="6">
+                <a  href="https://www.imdb.com/title/tt0884732/?ref_=nv_sr_srsg_8_tt_8_nm_0_q_the%2520wedd"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/15/02/16/11/57/347105.jpg" alt=" ">
+                </a>
+                <h3>THE WEDDİNG RİNGER</h3>
+                <p>IMDB Puanı:6.6 </p>
+                
+            </div>
+            <div class="movie" id="7">
+                <a  href="https://www.imdb.com/title/tt4176826/?ref_=nv_sr_srsg_0_tt_1_nm_0_q_bak%2520kim%2520d%25C3%25B6nd%25C3%25BC"target="_blank">
+                    <img src="https://tr.web.img3.acsta.net/pictures/15/09/24/12/35/376155.jpg " alt=" ">
+                </a>
+                <h3>BAK KİM DÖNDÜ </h3>
+                <p>IMDB Puanı:7.0 </p>
+                
+            </div>
+            <div class="movie" id="8">
+                <a  href="https://www.imdb.com/title/tt7748244/?ref_=nv_sr_srsg_1_tt_7_nm_1_q_%25C3%25B6l%25C3%25BCml%25C3%25BC%2520” target="target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/18/01/17/15/56/3774302.jpg " alt=" ">
+                </a>
+                <h3>ÖLÜMLÜ DÜNYA </h3>
+                <p>IMDB Puanı:7.6 </p>
+                
+            </div>
+            <div class="movie" id="9">
+                <a  href="https://www.imdb.com/title/tt9675274/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_cinayet"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/19/08/23/16/04/0930047.jpg " alt=" ">
+                </a>
+                <h3>CİNAYET SÜSÜ </h3>
+                <p>IMDB Puanı:6.7 </p>
+                
+            </div>
+            <div class="movie" id="10">
+                <a  href="https://www.imdb.com/title/tt4192740/?ref_=nv_sr_srsg_4_tt_7_nm_1_q_limona"target="_blank">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mbdAGRwdg3QIxmDs_P1cVL8fgQ9SIt6yirAGaYNSQcLA=s900-c-k-c0x00ffffff-no-rj " alt=" ">
+                </a>
+                <h3>LİMONATA </h3>
+                <p>IMDB Puanı:7.4 </p>
+                
+            </div>
+            <div class="movie" id="11">
+                <a  href="https://www.imdb.com/title/tt0109040/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_budala%2520ded"target="_blank">
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/2ce43ca7927b24167c65a2a84578cd71f93ad96b24ea623c77471be4c12aa808.jpg " alt=" ">
+                </a>
+                <h3>BUDALA DEDEKTİF </h3>
+                <p>IMDB Puanı:6.9 </p>
+                
+            </div>
+            <div class="movie" id="12">
+                <a  href="https://www.imdb.com/title/tt0264464/?ref_=nv_sr_srsg_0_tt_3_nm_5_q_s%25C4%25B1k%25C4%25B1ysa"target="_blank">
+                    <img src=" https://tr.web.img3.acsta.net/pictures/bzp/01/35973.jpg" alt=" ">
+                </a>
+                <h3> SIKIYSA YAKALA</h3>
+                <p>IMDB Puanı:8.1 </p>
+                
+            </div>
+            <div class="movie" id="13">
+                <a  href="https://www.imdb.com/title/tt2150209/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_dedemin%2520in"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/195891.jpg " alt=" ">
+                </a>
+                <h3>DEDEMİN İNSANLARI </h3>
+                <p>IMDB Puanı:8.0 </p>
+                
+            </div>
+            <div class="movie" id="14">
+                <a  href="https://www.imdb.com/title/tt0826631/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_s%25C4%25B1nav"target="_blank">
+                    <img src="https://tr.web.img2.acsta.net/pictures/bzp/03/123262.jpg " alt=" ">
+                </a>
+                <h3>SINAV </h3>
+                <p>IMDB Puanı:6.7 </p>
+                
+            </div>
+            <div class="movie" id="15">
+                <a  href="https://www.imdb.com/title/tt0110475/?ref_=nv_sr_srsg_2_tt_7_nm_1_q_maske"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/10744.jpg " alt=" ">
+                </a>
+                <h3>THE MASK </h3>
+                <p>IMDB Puanı:6.9 </p>
+                
+            </div>
+
+
+
+        </div>
+
+
+
+    
+            
+           
+            {% elif movie_genre == "Action" %}
+        <div class="movie-container">
+            <div class="movie" id="1">
+                <a  href="https://www.imdb.com/title/tt0120689/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_ye%25C5%259Fil%2520yol"target="_blank">
+                    <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/22779.jpg " alt=" ">
+                </a>
+                <h3>YEŞİL YOL </h3>
+                <p>IMDB Puanı:8.6 </p>
+                
+            </div>
+            <div class="movie" id="2">
+                <a  href="https://www.imdb.com/title/tt0068646/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_godfa"target="_blank">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg" alt=" ">
+                </a>
+                <h3>THE GODFATHER </h3>
+                <p>IMDB Puanı:9.2 </p>
+                
+            </div>
+            <div class="movie" id="3">
+                <a  href="https://www.imdb.com/title/tt0118799/?ref_=nv_sr_srsg_0_tt_4_nm_0_q_hayat%2520g%25C3%25BCzeldir"target="_blank">
+                    <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/64439.jpg " alt=" ">
+                </a>
+                <h3>HAYAT GÜZELDİR</h3>
+                <p>IMDB Puanı:8.6 </p>
+                
+            </div>
+            <div class="movie" id="4">
+                <a  href="https://www.imdb.com/title/tt0482571/?ref_=nv_sr_srsg_0_tt_2_nm_6_q_prestij"target="_blank">
+                    <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/108998.jpg " alt=" ">
+                </a>
+                <h3>PRESTİJ </h3>
+                <p>IMDB Puanı:8.5 </p>
+                
+            </div>
+            <div class="movie" id="5">
+                <a  href="https://www.imdb.com/title/tt1375666/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_ba%25C5%259Flang%25C4%25B1%25C3%25A7"target="_blank">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/764/590/391/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg" alt=" ">
+                </a>
+                <h3>INCEPTION </h3>
+                <p>IMDB Puanı:8.8 </p>
+                
+            </div>
+            <div class="movie" id="6">
+                <a  href="https://www.imdb.com/title/tt0120382/?ref_=nv_sr_srsg_7_tt_6_nm_2_q_TRUM"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/18671.jpg " alt=" ">
+                </a>
+                <h3>TRUMAN SHOW </h3>
+                <p>IMDB Puanı:8.2 </p>
+                
+            </div>
+            <div class="movie" id="7">
+                <a  href="https://www.imdb.com/title/tt0434409/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_v%2520for"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/58911.jpg" alt=" ">
+                </a>
+                <h3> V FOR VENDETTA</h3>
+                <p>IMDB Puanı:8.2 </p>
+                
+            </div>
+            <div class="movie" id="8">
+                <a  href="https://www.imdb.com/title/tt0086250/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_YARALI%2520Y%25C3%259CZ"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/900.jpg " alt=" ">
+                </a>
+                <h3>SCARFACE </h3>
+                <p>IMDB Puanı:8.3 </p>
+                
+            </div>
+            <div class="movie" id="9">
+                <a  href="https://www.imdb.com/title/tt0382932/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_RATAT"target="_blank">
+                    <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/46211.jpg " alt=" ">
+                </a>
+                <h3>RATATUY </h3>
+                <p>IMDB Puanı:8.1 </p>
+                
+            </div>
+            <div class="movie" id="10">
+                <a  href="https://www.imdb.com/title/tt0425210/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_%25C5%259EANSLI%2520"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/57952.jpg " alt=" ">
+                </a>
+                <h3>LUCKY NUMBER SLEVİN </h3>
+                <p>IMDB Puanı:7.7 </p>
+                
+            </div>
+            <div class="movie" id="11">
+                <a  href="https://www.imdb.com/title/tt0364569/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_%25C4%25B0HT%25C4%25B0YAR%2520DEL%25C4%25B0KA"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/c_310_420/pictures/bzp/03/54137.jpg " alt=" ">
+                </a>
+                <h3>OLDBOY </h3>
+                <p>IMDB Puanı:8.3 </p>
+                
+            </div>
+            <div class="movie" id="12">
+                <a  href="https://www.imdb.com/title/tt0993846/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_PARA%2520AV"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/14/01/24/10/55/409246.jpg " alt=" ">
+                </a>
+                <h3> THE WOLF OF WALL STREET </h3>
+                <p>IMDB Puanı:8.2 </p>
+                
+            </div>
+            <div class="movie" id="13">
+                <a  href="https://www.imdb.com/title/tt0407887/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_K%25C3%2596STEBE"target="_blank">
+                    <img src=" https://tr.web.img2.acsta.net/pictures/bzp/01/55983.jpg" alt=" ">
+                </a>
+                <h3>KÖSTEBEK </h3>
+                <p>IMDB Puanı:8.5 </p>
+                
+            </div>
+            <div class="movie" id="14">
+                <a  href="https://www.imdb.com/title/tt0258463/?ref_=nv_sr_srsg_0_tt_3_nm_0_q_GE%25C3%2587M%25C4%25B0%25C4%25B0%25C5%259E%25C4%25B0%2520OLMAYAN%2520"target="_blank">
+                    <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/29071.jpg " alt=" ">
+                </a>
+                <h3>GEÇMİŞİ OLMAYAN ADAM</h3>
+                <p>IMDB Puanı:7.8 </p>
+                
+            </div>
+            <div class="movie" id="15">
+                <a  href="https://www.imdb.com/title/tt0362227/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_TERM%25C4%25B0NAL"target="_blank">
+                    <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/40882.jpg " alt=" ">
+                </a>
+                <h3>TERMİNAL </h3>
+                <p>IMDB Puanı:7.4 </p>
+                
+            </div>
+        </div>
+
+               
+            
+
+            {% elif movie_genre == "Romantic" %}
+            <div class="movie-container">
+                <div class="movie" id="1">
+                    <a  href="https://www.imdb.com/title/tt0338013/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_sil%2520ba%25C5%259F"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/40191.jpg " alt=" ">
+                    </a>
+                    <h3>SİL BAŞTAN </h3>
+                    <p>IMDB Puanı:8.3 </p>
+                    
+                </div>
+                <div class="movie" id="2">
+                    <a  href="https://www.imdb.com/title/tt0856791/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_%25C4%25B0LK%2520A%25C5%259EK"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/186703.jpg " alt=" ">
+                    </a>
+                    <h3>İLK AŞK </h3>
+                    <p>IMDB Puanı:6.7 </p>
+                    
+                </div>
+                <div class="movie" id="3">
+                    <a  href="https://www.imdb.com/title/tt2674426/?ref_=nv_sr_srsg_0_tt_5_nm_0_q_SENDEN%2520%25C3%2596NCE%2520BEN"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/16/06/07/16/38/013892.jpg " alt=" ">
+                    </a>
+                    <h3>SENDEN ÖNCE BEN </h3>
+                    <p>IMDB Puanı:7.4 </p>
+                    
+                </div>
+                <div class="movie" id="4">
+                    <a  href="https://www.imdb.com/title/tt5076214/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_DEL%25C4%25B0BAL"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/15/11/02/11/42/192563.jpg " alt=" ">
+                    </a>
+                    <h3>DELİBAL </h3>
+                    <p>IMDB Puanı:6.7 </p>
+                    
+                </div>
+                <div class="movie" id="5">
+                    <a  href="https://www.imdb.com/title/tt1457767/?ref_=nv_sr_srsg_2_tt_8_nm_0_q_the%2520con"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/210/263/21026346_20130812140044703.jpg" alt=" ">
+                    </a>
+                    <h3>KORKU SEANSI </h3>
+                    <p>IMDB Puanı:7.5 </p>
+                    
+                </div>
+                <div class="movie" id="6">
+                    <a  href="https://www.imdb.com/title/tt1758692/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_L%25C4%25B0KE%2520CRA"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/medias/nmedia/18/82/91/93/19788946.jpg " alt=" ">
+                    </a>
+                    <h3>LİKE CRAZY </h3>
+                    <p>IMDB Puanı:6.6 </p>
+                    
+                </div>
+                <div class="movie" id="7">
+                    <a  href="https://www.imdb.com/title/tt2101569/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_IN%2520YOUR%2520EYES"target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzM5YzFiZDctZTIzZi00NzM4LWI1YjgtMzM0NjFhMTk2ZGU4XkEyXkFqcGdeQXVyMjQwMjk0NjI@._V1_FMjpg_UX1000_.jpg " alt=" ">
+                    </a>
+                    <h3>IN YOUR EYES </h3>
+                    <p>IMDB Puanı:6.9 </p>
+                    
+                </div>
+                <div class="movie" id="8">
+                    <a  href="https://www.imdb.com/title/tt1513713/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_BA%25C5%259EKA%2520D%25C4%25B0LDE%2520A%25C5%259EK"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/186673.jpg " alt=" ">
+                    </a>
+                    <h3>BAŞKA DİLDE AŞK  </h3>
+                    <p>IMDB Puanı:7.3 </p>
+                    
+                </div>
+                <div class="movie" id="9">
+                    <a  href="https://www.imdb.com/title/tt1807950/?ref_=nv_sr_srsg_0_tt_3_nm_0_q_A%25C5%259EK%2520TESAD"target="_blank">
+                        <img src="https://i.pinimg.com/736x/eb/ee/73/ebee73892234b118ea193bbd4014208b.jpg " alt=" ">
+                    </a>
+                    <h3>AŞK TEDADÜFLERİ SEVER </h3>
+                    <p>IMDB Puanı:7.2 </p>
+                    
+                </div>
+                <div class="movie" id="10">
+                    <a  href="https://www.imdb.com/title/tt0351283/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_MADAGASKAS"target="_blank">
+                        <img src=" https://tr.web.img4.acsta.net/medias/nmedia/18/35/50/69/18418762.jpg " alt=" ">
+                    </a>
+                    <h3>MADAGASKAR </h3>
+                    <p>IMDB Puanı:6.9 </p>
+                    
+                </div>
+                <div class="movie" id="11">
+                    <a  href="https://www.imdb.com/title/tt0332280/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_NOT%2520DEFTER%25C4%25B0"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/47422.jpg " alt=" ">
+                    </a>
+                    <h3>NOT DEFTERİ </h3>
+                    <p>IMDB Puanı: 7.8 </p>
+                    
+                </div>
+                <div class="movie" id="12">
+                    <a  href="https://www.imdb.com/title/tt0211915/?ref_=nv_sr_srsg_0_tt_3_nm_5_q_AMEL%25C4%25B0E"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/27063.jpg " alt=" ">
+                    </a>
+                    <h3>AMELİE </h3>
+                    <p>IMDB Puanı:8.3 </p>
+                    
+                </div>
+                <div class="movie" id="13">
+                    <a  href="https://www.imdb.com/title/tt2245084/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_S%25C3%259CPER%2520KAHRAMAN"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/14/06/17/10/59/244197.jpg " alt=" ">
+                    </a>
+                    <h3> 6 SÜPER KAHRAMAN</h3>
+                    <p>IMDB Puanı:7.8 </p>
+                    
+                </div>
+                <div class="movie" id="14">
+                    <a  href="https://www.imdb.com/title/tt1323594/?ref_=nv_sr_srsg_0_tt_5_nm_0_q_%25C3%2587ILGIN%2520HIRSIZ"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/bzp/03/140623.jpg " alt=" ">
+                    </a>
+                    <h3>ÇILGIN HIRSIZ </h3>
+                    <p>IMDB Puanı:7.6 </p>
+                    
+                </div>
+                <div class="movie" id="15">
+                    <a  href="https://www.imdb.com/title/tt1153085/?ref_=nv_sr_srsg_5_tt_5_nm_3_q_SENUM"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/186857.jpg " alt=" ">
+                    </a>
+                    <h3>SEMUM </h3>
+                    <p>IMDB Puanı:5.0 </p>
+                    
+                </div>
+            </div>
+    
+                   
+
+
+
+            {% elif movie_genre == "Adventure" %}
+            <div class="movie-container">
+                <div class="movie" id="1">
+                    <a  href="https://www.imdb.com/title/tt0480249/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_ben%2520efsane"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/105557.jpg " alt=" ">
+                    </a>
+                    <h3>BEN EFSANEYİM </h3>
+                    <p>IMDB Puanı:7.2 </p>
+                    
+                </div>
+                <div class="movie" id="2">
+                    <a  href="https://www.imdb.com/title/tt1130884/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_Z%25C4%25B0NDAN%2520ADAS"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/132039.jpg " alt=" ">
+                    </a>
+                    <h3>ZİNDAN ADASI </h3>
+                    <p>IMDB Puanı:8.2 </p>
+                    
+                </div>
+                <div class="movie" id="3">
+                    <a  href="https://www.imdb.com/title/tt1396218/?ref_=nv_sr_srsg_0_tt_1_nm_3_q_BABAMIN%2520PENG"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/medias/nmedia/18/84/91/22/19764112.jpg " alt=" ">
+                    </a>
+                    <h3>BABAMIN PENGUENLERİ </h3>
+                    <p>IMDB Puanı:6.0 </p>
+                    
+                </div>
+                <div class="movie" id="4">
+                    <a  href="https://www.imdb.com/title/tt1051907/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_KABADAYI"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/132304.jpg " alt=" ">
+                    </a>
+                    <h3>KABADAYI </h3>
+                    <p>IMDB Puanı:7.8 </p>
+                    
+                </div>
+                <div class="movie" id="5">
+                    <a  href="https://www.imdb.com/title/tt0120382/"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/18671.jpg " alt=" ">
+                    </a>
+                    <h3>TRUMAN SHOW </h3>
+                    <p>IMDB Puanı:8.2 </p>
+                    
+                </div>
+                <div class="movie" id="6">
+                    <a  href="https://www.imdb.com/title/tt0325710/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_SON%2520SAMURAY"target="_blank">
+                        <img src=" https://tr.web.img2.acsta.net/pictures/bzp/01/46943.jpg" alt=" ">
+                    </a>
+                    <h3> SON SAMURAY</h3>
+                    <p>IMDB Puanı:7.8 </p>
+                    
+                </div>
+                <div class="movie" id="7">
+                    <a  href="https://www.imdb.com/title/tt0068646/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_GODFATHER"target="_blank">
+                        <img src=" https://tr.web.img3.acsta.net/medias/nmedia/18/91/63/78/20155809.jpg" alt=" ">
+                    </a>
+                    <h3>THE GODFATHER </h3>
+                    <p>IMDB Puanı:9.2 </p>
+                    
+                </div>
+                <div class="movie" id="8">
+                    <a  href="https://www.imdb.com/title/tt0816692/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_YILDIZLARARASI"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/14/10/09/15/52/150664.jpg " alt=" ">
+                    </a>
+                    <h3>INTERSTELLAR </h3>
+                    <p>IMDB Puanı:8.7 </p>
+                    
+                </div>
+                <div class="movie" id="9">
+                    <a  href="https://www.imdb.com/title/tt0454876/?ref_=nv_sr_srsg_6_tt_5_nm_3_q_PI"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/medias/nmedia/18/90/31/76/20184033.jpg " alt=" ">
+                    </a>
+                    <h3>Pİ'NİN YAŞAMI </h3>
+                    <p>IMDB Puanı:7.9 </p>
+                    
+                </div>
+                <div class="movie" id="10">
+                    <a  href="https://www.imdb.com/title/tt1320253/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_CEHENNEM%2520MELEKLER"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/140458.jpg " alt=" ">
+                    </a>
+                    <h3>CEHENNEM MELEKLERİ </h3>
+                    <p>IMDB Puanı:6.4 </p>
+                    
+                </div>
+                <div class="movie" id="11">
+                    <a  href="https://www.imdb.com/title/tt1219289/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_L%25C4%25B0M%25C4%25B0T%2520YOK"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/medias/nmedia/18/83/37/15/19685295.jpg " alt=" ">
+                    </a>
+                    <h3>LIMITLESS </h3>
+                    <p>IMDB Puanı:7.4 </p>
+                    
+                </div>
+                <div class="movie" id="12">
+                    <a  href="https://www.imdb.com/title/tt0114814/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_OLA%25C4%259EAN%2520%25C5%259E"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/12837.jpg " alt=" ">
+                    </a>
+                    <h3>OLAĞAN ŞÜPHELİLER </h3>
+                    <p>IMDB Puanı:8.5 </p>
+                    
+                </div>
+                <div class="movie" id="13">
+                    <a  href="https://www.imdb.com/title/tt1668191/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_AV%2520MEVS%25C4%25B0M%25C4%25B0"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/medias/nmedia/18/82/60/33/19628670.jpg " alt=" ">
+                    </a>
+                    <h3>AV MEVSİMİ </h3>
+                    <p>IMDB Puanı:7.4 </p>
+                    
+                </div>
+                <div class="movie" id="14">
+                    <a  href="https://www.imdb.com/title/tt1171701/?ref_=nv_sr_srsg_0_tt_1_nm_1_q_NEFES%2520VATA"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/178968.jpg " alt=" ">
+                    </a>
+                    <h3>NEFES: VATAN SAĞOLSUN </h3>
+                    <p>IMDB Puanı:8.0 </p>
+                    
+                </div>
+                <div class="movie" id="15">
+                    <a  href="https://www.imdb.com/title/tt0425333/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_PARDON"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/121163.jpg " alt=" ">
+                    </a>
+                    <h3>PARDON </h3>
+                    <p>IMDB Puanı: 8.1 </p>
+                    
+                </div>
+            </div>
+
+            
+            {% elif movie_genre == "Romantic Comedy" %}
+            <div class="movie-container">
+                <div class="movie" id="1">
+                    <a  href="https://www.imdb.com/title/tt0263975/?ref_=nv_sr_srsg_1_tt_6_nm_2_q_SELV%25C4%25B0%2520BO"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/186582.jpg " alt=" ">
+                    </a>
+                    <h3>SELVİ BOYLUM AL YAZMALIM </h3>
+                    <p>IMDB Puanı:8.5 </p>
+                    
+                </div>
+                <div class="movie" id="2">
+                    <a  href="https://www.imdb.com/title/tt0457939/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_THE%2520HOL%25C4%25B0DAY"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/bzp/01/60426.jpg " alt=" ">
+                    </a>
+                    <h3>THE HOLİDAY </h3>
+                    <p>IMDB Puanı:6.9 </p>
+                    
+                </div>
+                <div class="movie" id="3">
+                    <a  href="https://www.imdb.com/title/tt0125439/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_NOTT%25C4%25B0NG"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/r_1280_720/medias/nmedia/18/64/69/65/18841043.jpg " alt=" ">
+                    </a>
+                    <h3>AŞK ENGEL TANIMAZ </h3>
+                    <p>IMDB Puanı:7.2 </p>
+                    
+                </div>
+                <div class="movie" id="4">
+                    <a  href="https://www.imdb.com/title/tt11703050/?ref_=nv_sr_srsg_9_tt_8_nm_0_q_THE%2520HOUSE"target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOWM4NDgyN2QtN2UzNS00Y2YyLWJjMTgtNjljNjk2MmJjMjdmXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg " alt=" ">
+                    </a>
+                    <h3>THE HOUSE</h3>
+                    <p>IMDB Puanı:6.8 </p>
+                    
+                </div>
+                <div class="movie" id="5">
+                    <a  href="https://www.imdb.com/title/tt0314331/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_LOVE%2520AC"target="_blank">
+                        <img src="https://filmsiniflandirma.ktb.gov.tr/repo/Photos/9b622053-1cb5-430e-b827-048131aefd56.jpg " alt=" ">
+                    </a>
+                    <h3>AŞK HER YERDE </h3>
+                    <p>IMDB Puanı:7.6 </p>
+                    
+                </div>
+                <div class="movie" id="6">
+                    <a  href="https://www.imdb.com/title/tt2380307/?ref_=nv_sr_srsg_3_tt_1_nm_7_q_COCO"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/r_1280_720/img/86/42/86423dfc4aea8afac1986c1c2c432879.jpg " alt=" ">
+                    </a>
+                    <h3>COCO </h3>
+                    <p>IMDB Puanı:8.4 </p>
+                    
+                </div>
+                <div class="movie" id="7">
+                    <a  href="https://www.imdb.com/title/tt0832266/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_DEFINITEY%2520MAY"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/117247.jpg " alt=" ">
+                    </a>
+                    <h3>KESİNLİKLE, BELKİ </h3>
+                    <p>IMDB Puanı:7.1 </p>
+                    
+                </div>
+                <div class="movie" id="8">
+                    <a  href="https://www.imdb.com/title/tt6029122/?ref_=nv_sr_srsg_0_tt_2_nm_6_q_S%25C4%25B0CC%25C4%25B0N%25203"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/16/04/04/12/10/473536.jpg" alt=" ">
+                    </a>
+                    <h3>SİCCİN 3 </h3>
+                    <p>IMDB Puanı:6.1 </p>
+                    
+                </div>
+                <div class="movie" id="9">
+                    <a  href="https://www.imdb.com/title/tt0121164/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_%25C3%2596L%25C3%259C%2520GEL%25C4%25B0N"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/56718.jpg " alt=" ">
+                    </a>
+                    <h3>ÖLÜ GELİN </h3>
+                    <p>IMDB Puanı:7.4 </p>
+                    
+                </div>
+                <div class="movie" id="10">
+                    <a  href="https://www.imdb.com/title/tt1041829/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_THE%2520PRO"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/129019.jpg " alt=" ">
+                    </a>
+                    <h3>TEKLİF </h3>
+                    <p>IMDB Puanı:6.8 </p>
+                    
+                </div>
+                <div class="movie" id="11">
+                    <a  href="https://www.imdb.com/title/tt1570728/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_CRAZY"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/medias/nmedia/18/85/73/04/19802560.jpg " alt=" ">
+                    </a>
+                    <h3>ÇILGIN APTAL AŞK </h3>
+                    <p>IMDB Puanı:7.4 </p>
+                    
+                </div>
+                <div class="movie" id="12">
+                    <a  href="https://www.imdb.com/title/tt0120888/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_THE%2520WEDD%25C4%25B0NG%2520"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/05/18066.jpg " alt=" ">
+                    </a>
+                    <h3>EVLİLİK ÖPÜCÜĞÜ </h3>
+                    <p>IMDB Puanı:6.9 </p>
+                    
+                </div>
+                <div class="movie" id="13">
+                    <a  href="https://www.imdb.com/title/tt1523411/?ref_=nv_sr_srsg_0_tt_3_nm_0_q_A%25C5%259EK%2520GEL%25C4%25B0YORUM%2520DEME"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/176639.jpg " alt=" ">
+                    </a>
+                    <h3>AŞK GELİYORUM DEMEZ </h3>
+                    <p>IMDB Puanı:5.1 </p>
+                    
+                </div>
+                <div class="movie" id="14">
+                    <a  href="https://www.imdb.com/title/tt8045670/?ref_=nv_sr_srsg_0_tt_3_nm_0_q_D%25C3%259C%25C4%259E%25C3%259CM%2520SALONU"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/18/02/16/12/01/0438917.jpg " alt=" ">
+                    </a>
+                    <h3>DÜĞÜM SALONU </h3>
+                    <p>IMDB Puanı:5.4 </p>
+                    
+                </div>
+                <div class="movie" id="15">
+                    <a  href="https://www.imdb.com/title/tt0332280/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_NOT%2520DEF"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/47422.jpg " alt=" ">
+                    </a>
+                    <h3>NOT DEFTERİ </h3>
+                    <p>IMDB Puanı:7.8 </p>
+                    
+                </div>
+            </div>
+    
+
+
+            {% elif movie_genre == "Gerilim" %}
+            <div class="movie-container">
+                <div class="movie" id="1">
+                    <a  href="https://www.imdb.com/title/tt8009428/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_HUSTLE"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/22/05/11/09/48/5078099.jpg " alt=" ">
+                    </a>
+                    <h3>HUSTLE </h3>
+                    <p>IMDB Puanı:7.3 </p>
+                    
+                </div>
+                <div class="movie" id="2">
+                    <a  href="https://www.imdb.com/title/tt7862330/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_CEB%25C4%25B0MDEK%25C4%25B0%2520YABANCI"target="_blank">
+                        <img src="https://pbs.twimg.com/media/DUiyrsFWsAAPGIS.jpg " alt=" ">
+                    </a>
+                    <h3>CEBİMDEKİ YABANCI </h3>
+                    <p>IMDB Puanı:6.8 </p>
+                    
+                </div>
+                <div class="movie" id="3">
+                    <a  href="https://www.imdb.com/title/tt2338151/?ref_=nv_sr_srsg_0_tt_3_nm_5_q_PK"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/15/03/12/14/50/198891.jpg " alt=" ">
+                    </a>
+                    <h3>PK </h3>
+                    <p>IMDB Puanı:8.1 </p>
+                    
+                </div>
+                <div class="movie" id="4">
+                    <a  href="https://www.imdb.com/title/tt0137523/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_fight"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/r_1280_720/img/86/51/86513ed90118b9d738e65f498c31cfdd.jpg " alt=" ">
+                    </a>
+                    <h3>FIGHT CLUB </h3>
+                    <p>IMDB Puanı:8.8 </p>
+                    
+                </div>
+                <div class="movie" id="5">
+                    <a  href="https://www.imdb.com/title/tt0207201/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_KADINLAR%2520NE%2520"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/01/27552.jpg " alt=" ">
+                    </a>
+                    <h3>KADINLAR NE İSTER </h3>
+                    <p>IMDB Puanı:6.4 </p>
+                    
+                </div>
+                <div class="movie" id="6">
+                    <a  href="https://www.imdb.com/title/tt0075314/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_TAXI"target="_blank">
+                        <img src=" https://tr.web.img3.acsta.net/pictures/bzp/01/308.jpg" alt=" ">
+                    </a>
+                    <h3> TAXI DRIVER</h3>
+                    <p>IMDB Puanı:8.2 </p>
+                    
+                </div>
+                <div class="movie" id="7">
+                    <a  href="https://www.imdb.com/title/tt0112697/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_CLUELESS"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/medias/nmedia/18/87/16/03/19872626.jpg" alt=" ">
+                    </a>
+                    <h3>FIRLAMA KIZLAR </h3>
+                    <p>IMDB Puanı:6.9 </p>
+                    
+                </div>
+                <div class="movie" id="8">
+                    <a  href="https://www.imdb.com/title/tt0253474/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_P%25C4%25B0YAN%25C4%25B0ST"target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/c/c0/The_Pianist_Poster.jpg/800px-The_Pianist_Poster.jpg " alt=" ">
+                    </a>
+                    <h3>PİYANİST </h3>
+                    <p>IMDB Puanı:8.5 </p>
+                    
+                </div>
+                <div class="movie" id="9">
+                    <a  href="https://www.imdb.com/title/tt0454876/?ref_=nv_sr_srsg_6_tt_5_nm_3_q_PI"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/medias/nmedia/18/90/31/76/20184033.jpg " alt=" ">
+                    </a>
+                    <h3>Pİ'NİN YAŞAMI </h3>
+                    <p>IMDB Puanı:7.9 </p>
+                    
+                </div>
+                <div class="movie" id="10">
+                    <a  href="https://www.imdb.com/title/tt0386588/?ref_=nv_sr_srsg_6_tt_8_nm_0_q_H%25C4%25B0TCH"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/bzp/03/47705.jpg " alt=" ">
+                    </a>
+                    <h3>AŞK DOKTORU </h3>
+                    <p>IMDB Puanı:6.6 </p>
+                    
+                </div>
+                <div class="movie" id="11">
+                    <a  href="https://www.imdb.com/title/tt1950186/?ref_=nv_sr_srsg_0_tt_2_nm_0_q_ASFALTIN%2520KRAL"target="_blank">
+                        <img src="https://tr.web.img3.acsta.net/pictures/19/10/16/16/28/5029277.jpg " alt=" ">
+                    </a>
+                    <h3>FORD v FERRARİ </h3>
+                    <p>IMDB Puanı:8.1 </p>
+                    
+                </div>
+                <div class="movie" id="12">
+                    <a  href="https://www.imdb.com/title/tt1663202/?ref_=nv_sr_srsg_2_tt_8_nm_0_q_dirili%25C5%259F"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/pictures/15/11/27/14/39/159627.jpg " alt=" ">
+                    </a>
+                    <h3>DİRİLİŞ </h3>
+                    <p>IMDB Puanı:8.0 </p>
+                    
+                </div>
+                <div class="movie" id="13">
+                    <a  href="https://www.imdb.com/title/tt0454921/?ref_=nv_sr_srsg_0_tt_4_nm_0_q_UMUDUNU%2520KAYBETME"target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/9/96/Umudunu_Kaybetme_afi%C5%9F.jpg" alt=" ">
+                    </a>
+                    <h3>UMUDUNU KAYBETME </h3>
+                    <p>IMDB Puanı:8.0 </p>
+                    
+                </div>
+                <div class="movie" id="14">
+                    <a  href="https://www.imdb.com/title/tt1210166/?ref_=nv_sr_srsg_0_tt_2_nm_0_q_KAZANMA%2520SANATI"target="_blank">
+                        <img src="https://tr.web.img4.acsta.net/img/12/65/12659a6eb2ae4ba9d20395fc047ecc9a.jpg " alt=" ">
+                    </a>
+                    <h3>KAZANMA SANATI </h3>
+                    <p>IMDB Puanı:7.6 </p>
+                    
+                </div>
+                <div class="movie" id="15">
+                    <a  href="https://www.imdb.com/title/tt3477480/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_SADECE%2520SEN"target="_blank">
+                        <img src="https://tr.web.img2.acsta.net/pictures/14/01/28/11/07/362905.jpg " alt=" ">
+                    </a>
+                    <h3>SADECE SEN </h3>
+                    <p>IMDB Puanı:7.3 </p>
+                    
+                </div>
+            </div>
+                   
+               
+
+
+
+
+
+            {% endif %}
+        
+    </ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}EMPATİFİLM{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/survey.css' %}">
+        {% endblock %}
+    </head>
+</head>
+<body>
+    <div class="logo">
+        <h1 class="lg">EMPATİFİLM</h1>
+    </div>
+    <a href="{% url 'home' %}" class="geri"> ←GERİ DÖN</a>
+    
+            {% csrf_token %}
+            <button class="logout-button" type="submit">ÇIKIŞ YAP</button>
+    
+
+    <form method="post">
+        {% csrf_token %}
+
+    <div class="container">      
+        <div class="soru">
+            <label for="question1">Şuan nasıl hissediyorsunuz?</label><br>
+            <input type="radio" id="question1a" name="question1" value="A">
+            <label for="question1a">Mutlu/Normal</label><br>
+            <input type="radio" id="question1b" name="question1" value="B">
+            <label for="question1b">Üzgün/Sıkılmış</label><br>
+        </div>
+
+        <div class="soru">
+            <label for="question2">İlişki durumunuz nedir?</label><br>
+            <input type="radio" id="question2a" name="question2" value="A">
+            <label for="question2a">İlişkim Var</label><br>
+            <input type="radio" id="question2b" name="question2" value="B">
+            <label for="question2b">Yalnızım</label><br>
+        </div>
+
+        <div class="soru">
+            <label for="question3">Filmi kiminle izleyeceksiniz?</label><br>
+            <input type="radio" id="question3a" name="question3" value="A">
+            <label for="question3a">Sevgilimle/Eşimle</label><br>
+            <input type="radio" id="question3b" name="question3" value="B">
+            <label for="question3b">Yalnız</label><br>
+        </div>
+
+        <button class="gonder" type="submit">ÖNER BAKALIM </button>
+    </form>
+
+</div>
+</body>
+</html>

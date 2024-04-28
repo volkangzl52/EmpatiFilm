@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+    background-image: url('https://images6.alphacoders.com/126/1269171.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    transform: translateX(-50%);
+    width: 100%; 
+    text-align: center;
+    color: gold;
+}
+
+.container {
+    width: 400px;
+    padding: 30px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+.soru label {
+    font-size: 18px; 
+}
+
+.soru input[type="radio"] {
+    appearance: none; 
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+    border: 2px solid #000; 
+    outline: none; 
+    margin-right: 10px; 
+}
+
+.soru input[type="radio"]:checked {
+    background-color: #000; 
+}
+
+.gonder {
+    width: 100%;
+    padding: 15px; 
+    background-color: #d01414; 
+    color: #000000; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+.gonder:hover {
+    background-color: #8c0f0f; 
+}
+
+.geri {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logout-button {
+    height: 39px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #d51a1a;
+    color: #000000;
+}

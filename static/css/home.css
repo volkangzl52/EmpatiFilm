@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+    background-image: url('https://images6.alphacoders.com/126/1269171.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: gold;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logout-button {
+    height: 39px;
+    
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #d51a1a;
+    color: #000000;
+}
+.change-password-link {
+    position: fixed;
+    top: 20px;
+    right: calc(20px + 140px); 
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+}
+
+.change-password-link:hover {
+    background-color: #d51a1a;
+    color: #000000;
+}
+.btn{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-message{
+    
+    color: gold;
+    font-size: 34px;
+    text-align: center;
+}
+.anket {
+    border-radius: 50px;
+    font-size: 34px;
+    padding: 7px 20px;
+    background-color: #000000;
+    color: #d01414;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none;
+    
+  }
+
+.signup-link,
+.login-link,
+.survey-link {
+    position: fixed;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.signup-link {
+    right: 20px; 
+}
+
+.login-link {
+    right: calc(20px + 140px); 
+}
+
+.survey-link{
+    right: calc(20px + 200px);
+
+}
+
+.signup-link:hover,
+.login-link:hover {
+    background-color: #d51a1a;
+    color: #000000;
+}
+
+.home-2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gold;
+    font-size: 34px;
+    text-align: center;
+
+
+}
+
+

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+    background-image: url('https://images6.alphacoders.com/126/1269171.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: gold;
+    font-size: 24px;
+    font-weight: bold;
+}
+.yok{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gold;
+    font-size: 34px;
+    text-align: center;
+}
+
+.change-password-link {
+    position: fixed;
+    top: 20px;
+    right: calc(20px + 140px); 
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+}
+
+.change-password-link:hover {
+    background-color: #d51a1a;
+    color: #000000;
+}
+
+.logout-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #d01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #d51a1a;
+    color: #000000;
+}
